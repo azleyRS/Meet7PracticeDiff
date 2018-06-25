@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
+    private MyAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
     private Button mButton;
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 personList.add(new Person(6,"Person633",22));
                 personList.add(new Person(7,"Person7",21));
                 personList.add(new Person(8,"Person8",2));
+                mAdapter.onNewData(personList);
             }
         });
 

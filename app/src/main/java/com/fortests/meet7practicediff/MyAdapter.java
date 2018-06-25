@@ -73,7 +73,7 @@ class MyAdapter extends android.support.v7.widget.RecyclerView.Adapter<MyAdapter
         }
     }
 
-    public void onNewData(ArrayList<Person> newData){
+    public void onNewData(List<Person> newData){
         DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new DiffCall(newData,mPersonList));
         diffResult.dispatchUpdatesTo(this);
         mPersonList.clear();
